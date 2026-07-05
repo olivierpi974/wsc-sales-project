@@ -9,7 +9,7 @@ Architecture deux services Docker : exécution des scripts Python + stockage SQL
 
 ## Architecture
 
-![Architecture](assets/Schéma_architecture.png)
+![Architecture](assets/Schéma_architecture.png.png)
 
 - **Service app** : conteneur Python — collecte, transformation et ingestion
 - **Service db** : conteneur SQLite — héberge le volume de stockage
