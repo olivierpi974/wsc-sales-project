@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    volumes:
+      - db-data:/usr/src/app/db  # Le script Python écrira sa base dans le sous-dossier ./db
+    depends_on:
+      - db
+
+  db:
+    image: alpine/sqlite:latest                  
+    volumes:
+      - db-data:/data            # Monte le même volume dans le dossier par défaut de l'image
+    command: sh -c "tail -f /dev/null"      
+
+volumes:
+  db-data:
